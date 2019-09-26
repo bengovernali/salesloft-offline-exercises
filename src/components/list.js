@@ -36,6 +36,7 @@ class List extends Component {
     const people = this.state.data;
     console.log("DATA FROM STATE: ", people);
 
+    //generate table. map info for each person to respective columns
     return (
       <div>
         <h2>People</h2>
