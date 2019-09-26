@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 import List from "./components/list";
+import Characters from "./components/characters";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <h1>My Simple Salesloft App</h1>
         <List />
+        <Characters />
       </div>
     );
   }
