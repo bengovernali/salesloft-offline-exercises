@@ -10,7 +10,8 @@ class List extends Component {
   }
 
   getData = async () => {
-    const url = "https://api.salesloft.com/v2/people.json";
+    const url =
+      "https://cors-anywhere.herokuapp.com/https://api.salesloft.com/v2/people.json";
     const options = { headers: { Authorization: `Bearer ${API_KEY}` } };
 
     axios.get(url, options).then(response => {
