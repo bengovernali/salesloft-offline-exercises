@@ -16,13 +16,11 @@ class Characters extends Component {
     const emails = info.map(person => {
       return person.email_address;
     });
-    //calculate character frequencies
+    //calculate character frequencies and set component state
     const frequencies = await this.getFrequencies(emails);
-    console.log(frequencies);
     this.setState({
       characters: frequencies
     });
-    console.log(this.state.characters);
   };
 
   //calculate the frequency of each unique character in all the email addresses
@@ -75,6 +73,7 @@ class Characters extends Component {
   };
 
   render() {
+    const characters = this.state.characters;
     return (
       <>
         <button onClick={this.handleClick}>
@@ -86,6 +85,14 @@ class Characters extends Component {
               <th>Character</th>
               <th>Count</th>
             </tr>
+            {characters.map(entry => {
+              return (
+                <tr key={entry[0]}>
+                  <th>{`${entry[0]}`}</th>
+                  <th>{`${entry[1]}`}</th>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </>
