@@ -14,4 +14,4 @@ I utilized axios for making HTTP requests. This was done so that I could add the
 
 ## Challenges
 
-Initially when making requests, a CORS error would be issued. I bypassed this issue by using a heroku proxy server. Unfortunately this means that the app in its current state only works on a local environment. This is where a backend server would have been helpful.
+Initially when making requests, a CORS error would be issued. I bypassed this issue by using a heroku proxy server. Unfortunately this means that the app in its current state only works on a local environment. This is where a backend server would have been helpful. When I attempted to deploy the app it didn't function correctly since the proxy doesn't work on builds.
